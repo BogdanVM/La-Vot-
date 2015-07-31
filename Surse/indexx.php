@@ -40,16 +40,7 @@
         }
         
         
-       /*while( $row = mysqli_fetch_assoc($result)){
-        //if ($result)
-           
-        if($row['Nume'] = $user && $row['Parola'] = $pass){
-                header("Location: Vot.php");
-                break;
-                }
-         else echo "Ati gresit datele";
-          }
-        */
+       
         mysqli_close($con);
       }
 ?>
