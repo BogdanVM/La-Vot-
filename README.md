@@ -1,4 +1,7 @@
-<strong><u>Resurse externe</u> </strong><p></p>
+<strong>1. Scurta prezentare </strong>
+<p>„La Vot!” vine sub forma unui site prin intermediul căruia orice cetățean cu drept de vot poate să-și exercite dreptul. Permite conectarea pe două tipuri de conturi: „Utilizator” și „Administrator”. Administratorul are posibilitatea de a crea conturile utilizatorilor, de a adăuga candidații, de a vedea rezultatele din scrutinele precedente și de a seta durata scrutinului. Utilizatorul primește prin email username-ul și parola după care se poate conecta și vota candidatul dorit sau își poate anula votul.</p>
+
+<strong>2. Resurse externe </strong><p></p>
 <strong> Tutoriale de pe: </strong>
  <ul>
     <li> http://stackoverflow.com/ </li>
