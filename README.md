@@ -1,5 +1,5 @@
-<strong> <p style="font-size: 40px;">                          Resurse externe </strong></p>
-<strong> <p style="font-size: 16px;"> Tutoriale de pe: </strong> </p>
+<strong><u>Resurse externe</u> </strong><br/>
+<strong> Tutoriale de pe: </strong>
  <ul>
     <li> http://stackoverflow.com/ </li>
     <li> https://www.youtube.com/?gl=RO&hl=ro </li>
