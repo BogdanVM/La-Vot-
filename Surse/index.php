@@ -42,9 +42,6 @@ table{
     
     <?php
        
-       
-            
-        
 
        date_default_timezone_set('Europe/Bucharest');
        setlocale(LC_TIME, array('ro.utf-8', 'ro_RO.UTF-8', 'ro_RO.utf-8', 'ro', 'ro_RO', 'ro_RO.ISO8859-2'));
@@ -60,7 +57,7 @@ table{
        
        if(date('H') > $hour){
              if($row['Sfarsit']){
-             //$conn = mysqli_connect("localhost","root","root","Alegatori") or die("Error " . mysqli_error($link));
+             
              $qer = "DELETE FROM Conturi WHERE Admin = 'NU'";
              
              $prc = "SELECT * FROM Conturi";
@@ -71,7 +68,7 @@ table{
              mysqli_stmt_execute($stmt);
              
              
-             //$cn = mysqli_connect("localhost","root","root","Alegatori") or die("Error " . mysqli_error($link));
+            
              $sel = "SELECT * FROM Candidati";
              $ins = "INSERT INTO Trecut(Nume,Voturi,Procent,An) VALUES (?,?,?,NOW())";
              
@@ -91,16 +88,20 @@ table{
              }
              
              $del = "DELETE FROM Candidati";
-         //    $st = mysqli_query($cn,$del);
+         
              $rz = mysqli_prepare($con,$del);
              mysqli_stmt_execute($rz);
+             require_once('class.phpmailer.php');
              
+             include("class.smtp.php");
              
-            // $connect = mysqli_connect("localhost","root","root","Alegatori") or die("Error " . mysqli_error($link));
+            
              $qqr = "SELECT * FROM Conturi";
              $rslt = mysqli_query($con, $qqr);
              $date = mysqli_fetch_array($rslt);
-             //$to      = $date['Email'];
+             
+             
+             
            $message = 'Numele de utilizator: ' . $date['Nume'] . '  Parola: ' . $date['Parola'];
             $mail = new PHPMailer();
     $mail->CharSet = "UTF-8";
@@ -132,19 +133,16 @@ table{
     //Main message
     $mail->MsgHTML($message);
 
-    //Your email, here you will receive the messages from this form. 
-    //This must be different from the one you use to send emails, 
-    //so we will just pass email from functions arguments
+    
     $mail->AddAddress($date['Email'], $date['Nume']);
     $mail->Send();
 
-           //mail($to, $subject, $message, $headers);
-           //mysqli_close($connect);
+           
            }
        }
        else if (date('i') > $min && date('H') >= $hour){
             if($row['Sfarsit']){
-            //$conn = mysqli_connect("localhost","root","root","Alegatori") or die("Error " . mysqli_error($link));
+            
              $qer = "DELETE FROM Conturi WHERE Admin = 'NU'";
            
              
@@ -152,7 +150,7 @@ table{
              mysqli_stmt_execute($stmt);
              
              
-             //$cn = mysqli_connect("localhost","root","root","Alegatori") or die("Error " . mysqli_error($link));
+             
              $sel = "SELECT * FROM Candidati";
              $ins = "INSERT INTO Trecut(Nume,Voturi,Procent,An) VALUES (?,?,?,NOW())";
              
@@ -176,9 +174,9 @@ table{
              mysqli_stmt_execute($rz);
              
              require_once('class.phpmailer.php');
-             // optional, gets called from within class.phpmailer.php if not already loaded
+             
              include("class.smtp.php");
-            //$connect = mysqli_connect("localhost","root","root","Alegatori") or die("Error " . mysqli_error($link));
+            
             $qqr = "SELECT * FROM Conturi";
             $rslt = mysqli_query($con, $qqr);
             $date = mysqli_fetch_array($rslt);
@@ -213,16 +211,11 @@ table{
     //Main message
     $mail->MsgHTML($message);
 
-    //Your email, here you will receive the messages from this form. 
-    //This must be different from the one you use to send emails, 
-    //so we will just pass email from functions arguments
+    
     $mail->AddAddress($date['Email'], $date['Nume']);
     $mail->Send();
             
-            
-
-            //mail($to, $subject, $message, $headers);
-            //mysqli_close($connect);
+           
             }
        }
      mysqli_close($con);
