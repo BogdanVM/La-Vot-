@@ -15,7 +15,6 @@
     
     
     require_once('class.phpmailer.php');
-    // optional, gets called from within class.phpmailer.php if not already loaded
     include("class.smtp.php");
     $con = mysqli_connect("localhost","root","root","Alegatori") or die("Error " . mysqli_error($link));
     $query = "SELECT * FROM Date";
@@ -66,9 +65,6 @@
     //Main message
     $mail->MsgHTML($message);
 
-    //Your email, here you will receive the messages from this form. 
-    //This must be different from the one you use to send emails, 
-    //so we will just pass email from functions arguments
     $mail->AddAddress($date['Email'], $date['Nume']);
     $mail->Send();
            
