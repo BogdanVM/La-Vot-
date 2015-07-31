@@ -1,4 +1,4 @@
-<strong><u>Resurse externe</u> </strong></br>
+<p><strong><u>Resurse externe</u> </strong></br></p>
 <strong> Tutoriale de pe: </strong>
  <ul>
     <li> http://stackoverflow.com/ </li>
