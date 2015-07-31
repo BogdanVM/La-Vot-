@@ -28,6 +28,7 @@ body{
         ?>
         <table id="tabel">
         <?php
+        $id = 1;
         while( $row = mysqli_fetch_assoc($result))
         {
              $nume = $row['Nume'];
@@ -37,15 +38,13 @@ body{
             <tr style="left: 20px;">
                <td style="font-family: Purisa; color:white "><h1><?php echo $row['Nume'] ?></h1></td> 
                <td> <?php echo '<img height="140" width="140" src="data:image;base64,'.$row['Poza'].' "> '; ?></td>
-               <td> <input type="submit" value="Voteaza" class="vote" name="<?php echo $row['Nume']?>"> </td>
+               <td> <input type="submit" value="Voteaza" class="vote" name="<?php echo $id ?>"> </td>
                 
                </tr>
             <?php
               
-              /*$num_vot = $row['Voturi'];
-              $_SESSION['num_vot'] = $num_vot;
-              $_SESSION['nume_cand'] = $row['Nume'];*/
-          
+              
+            $id = $id + 1;
            
         }
              ?>
