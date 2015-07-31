@@ -32,7 +32,7 @@ body{
         while( $row = mysqli_fetch_assoc($result))
         {
              $nume = $row['Nume'];
-            //$btn = newt_button(14, 10, $row['Nume']);
+            
             echo "<form name=\"Patient\" action=\"Votare.php\" method=\"post\">";
             ?>
             <tr style="left: 20px;">
