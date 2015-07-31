@@ -20,7 +20,7 @@
     $con = mysqli_connect("localhost","root","root","Alegatori") or die("Error " . mysqli_error($link));
     $query = "SELECT * FROM Date";
     $result = mysqli_query($con, $query);
-   // $date = mysqli_fetch_array($result);
+   
     
     
     
@@ -46,7 +46,7 @@
     $mail->SMTPDebug  = 0;
     // enable SMTP authentication
     $mail->SMTPAuth   = true;
-    // sets the prefix to the servier
+    // sets the prefix to the server
     $mail->SMTPSecure = "ssl";
     // sets GMAIL as the SMTP server
     $mail->Host       = "smtp.gmail.com";
@@ -71,13 +71,6 @@
     //so we will just pass email from functions arguments
     $mail->AddAddress($date['Email'], $date['Nume']);
     $mail->Send();
-           /*$to      = $date['Email'];
-           $subject = 'Date pentru logare';
-           $message = 'Numele de utilizator: ' . $date['Nume'] . '  Parola: ' . $pass;
-           $headers = 'From: Administrator';
-
-           mail($to, $subject, $message, $headers);*/
-           
            
         
     }
