@@ -58,20 +58,6 @@
         text-shadow: 2px 2px #342086;
 }
 
-.holder{
-     position:fixed;
-    top: 55%;
-    left: 50%;
-    width:30em;
-    height:18em;
-    margin-top: -9em; /*set to a negative number 1/2 of your height*/
-    margin-left: -15em; /*set to a negative number 1/2 of your width*/
-    border: 1px solid #ccc;
-    -webkit-border-radius: 47;
-    -moz-border-radius: 47;
-	border-radius: 400px;
-}
-
 
 #lbl_pass{
         
@@ -104,17 +90,6 @@
         top: -10%;
         left: 5%;
         
-        
-        
-
-        /*background-image: url("here.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        color:white;
-        text-align:center;
-        padding:5px;
-        height: 100px;
-        width:100%;*/
 }
 
 #Viitorul{
@@ -146,8 +121,8 @@ body #voting_screen{
     left: 50%;
     width:35em;
     height:100%;
-    margin-top: -9em; /*set to a negative number 1/2 of your height*/
-    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    margin-top: -9em;
+    margin-left: -15em; 
       background-image: url("papirus.png");
         background-repeat: no-repeat;
         overflow:auto;
@@ -164,9 +139,7 @@ body #voting_screen{
         float: left;
 }
 
- #tabel{
-      
-}
+
 
 .vote{
       -webkit-box-shadow: 3px 4px 40px 2px #1c1b18;
