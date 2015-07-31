@@ -1,1 +1,1 @@
-# La-Vot-
+<strong> Resurse </strong>
