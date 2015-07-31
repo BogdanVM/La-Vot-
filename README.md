@@ -1,4 +1,4 @@
-<strong> <p style="font-size: 40px;"> Resurse externe </strong></p>
+<strong> <p style="font-size: 40px;">                          Resurse externe </strong></p>
 <strong> <p style="font-size: 16px;"> Tutoriale de pe: </strong> </p>
  <ul>
     <li> http://stackoverflow.com/ </li>
